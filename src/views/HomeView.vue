@@ -11,20 +11,29 @@
       <i class="hot">Hot</i>
     </div>
     <!-- 编程好工具 -->
-    <Labs />
+    <Labs :labList="labList" />
+    <!-- footer -->
+    <Footer />
+    <!-- 侧边栏 -->
+    <Sidebar />
   </div>
 </template>
 
 <script>
 import Nav from '../components/Nav.vue'
 import Car from '../components/Car.vue'
-import Labs from '../components/Labs.vue'
+import Labs from '../components/Labs'
+import Footer from '../components/Footer.vue'
+import Sidebar from '../components/Sidebar.vue'
+import { Data } from '../data/LabList'
 export default {
   name: "Home",
   components: {
     Nav,
     Car,
-    Labs
+    Labs,
+    Footer,
+    Sidebar
   },
   data() {
     return {
@@ -35,7 +44,8 @@ export default {
         { id: '03', title: '2021腾讯追梦营嘉年华圆满落幕' }
       ],
       currentIndex: 0,
-      timer: null
+      timer: null,
+      labList: Data(),
     }
   },
   mounted() {
@@ -44,9 +54,13 @@ export default {
   methods: {
     run() {
       this.timer = setInterval(() => {
-        this.currentIndex++
+        if (this.currentIndex == 3) {
+          this.currentIndex = 0
+        } else {
+          this.currentIndex++
+        }
       }, 3500)
-    }
+    },
   }
 }
 </script>
