@@ -9,13 +9,15 @@
         <ul>
           <li
             @click="goDetail(item)"
+            @mouseover="mouseOver(item)"
+            @mouseleave="mouseLeave(item)"
             :class="[Currentli==item.u_id ?'select':'']"
             v-for="item in list"
             :key="item.u_id"
           >
             <div
               class="icon"
-              :style="{'background':Currentli==item.u_id ?item.backColor:''}"
+              :style="{'background':Currentli==item.u_id ?item.backColor:''||CurrentliNum == item.u_id ?item.backColor:''}"
               :class="[Currentli==item.u_id ?'selected':'']"
             >
               <img :src="item.img" alt />
@@ -89,7 +91,8 @@ export default {
   name: "Labs",
   data() {
     return {
-      Currentli: 0,
+      Currentli: 0, // 点击的样式标记
+      CurrentliNum: 0, //鼠标划入的
       content: this.labList.pageOne[0],
       flag: false,
       list: this.labList.pageOne,
@@ -100,14 +103,18 @@ export default {
     labList: { type: Object, default: () => { } }
   },
   mounted() {
-    console.log(this.labList);
-    console.log(this.content);
   },
   methods: {
     goDetail(params) {
-      console.log(params.u_id);
+      // console.log(params.u_id);
       this.Currentli = params.u_id
       this.content = params
+    },
+    mouseOver(params) {
+      this.CurrentliNum = params.u_id
+    },
+    mouseLeave() {
+
     },
     next() {
       this.flag = !this.flag

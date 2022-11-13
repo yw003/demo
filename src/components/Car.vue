@@ -96,7 +96,7 @@ export default {
 <style scoped lang="scss">
 .blue {
   color: #009cff;
-  border-bottom: 2px solid #009cff;
+  border-bottom: 2px solid #009cff !important;
 }
 .slide {
   position: relative;
@@ -115,6 +115,7 @@ export default {
     height: 50px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px 12px 0 0;
+    overflow: hidden;
     align-items: center;
     cursor: pointer;
     > a {
@@ -122,10 +123,15 @@ export default {
       line-height: 50px;
       width: 50px;
       text-decoration: none;
+      text-align: center;
       > i {
         font-size: 20px;
         color: rgba(223, 219, 219, 0.933);
       }
+    }
+    > a:hover {
+      color: #009cff;
+      background: #fff;
     }
     > ul {
       list-style: none;
@@ -137,6 +143,11 @@ export default {
         width: 220px;
         line-height: 50px;
         border-right: 1px solid rgba(255, 255, 255, 0.6);
+        text-align: center;
+        border-bottom: 2px solid transparent;
+      }
+      li:hover {
+        color: #009cff;
       }
     }
   }
