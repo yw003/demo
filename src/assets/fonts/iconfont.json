@@ -1,0 +1,37 @@
+{
+  "id": "3765269",
+  "name": "demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5473754",
+      "name": "右箭头-粗",
+      "font_class": "youjiantou-cu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "5473755",
+      "name": "左箭头-粗",
+      "font_class": "zuojiantou-cu",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "928548",
+      "name": "吃豆人",
+      "font_class": "u36",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "23214108",
+      "name": "正方体-线型",
+      "font_class": "zhengfangti-xianxing",
+      "unicode": "ea5a",
+      "unicode_decimal": 59994
+    }
+  ]
+}

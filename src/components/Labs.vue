@@ -13,7 +13,11 @@
             v-for="item in list"
             :key="item.u_id"
           >
-            <div class="icon">
+            <div
+              class="icon"
+              :style="{'background':Currentli==item.u_id ?item.backColor:''}"
+              :class="[Currentli==item.u_id ?'selected':'']"
+            >
               <img :src="item.img" alt />
             </div>
             <div>
@@ -42,13 +46,14 @@
             <p class="intro-left-title">{{content.title}}</p>
             <p class="intro-left-des">{{content.contentDes}}</p>
             <div class="ctrl">
-              <a href="#" class="btn">立即创作</a>
+              <a href="#" class="btn" v-if="content.u_id=='02'">立即体验</a>
+              <a href="#" class="btn" v-else>立即创作</a>
               <a href="#" class="link">了解更多</a>
               <i class="iconfont">&#xe609;</i>
             </div>
           </div>
           <div class="intro-right">
-            <video autoplay src="../assets/video/1.mp4" style="width: 100%; height: 100%;" loop></video>
+            <video muted autoplay :src="content.video" style="width: 100%; height: 100%;" loop></video>
           </div>
         </div>
         <div class="content-dowm">
@@ -84,12 +89,11 @@ export default {
   name: "Labs",
   data() {
     return {
-      startNum: 0,
-      endNum: 7,
       Currentli: 0,
       content: this.labList.pageOne[0],
       flag: false,
-      list:this.labList.pageOne
+      list: this.labList.pageOne,
+      showColor: false
     }
   },
   props: {
@@ -101,7 +105,7 @@ export default {
   },
   methods: {
     goDetail(params) {
-      console.log(params);
+      console.log(params.u_id);
       this.Currentli = params.u_id
       this.content = params
     },
@@ -138,10 +142,14 @@ export default {
 .blue {
   color: #498ff6 !important;
 }
+.selected {
+  border-radius: 100% !important;
+}
 ul {
   list-style: none;
 }
 .labs {
+  margin-top: 40px;
   .info {
     font-size: 16px;
     color: rgba(74, 89, 111, 0.6);
@@ -153,6 +161,7 @@ ul {
     background: #fff;
     border-radius: 12px;
     display: flex;
+    margin-top: 26px;
     .left {
       width: 290px;
       background: #009cff;
@@ -195,6 +204,11 @@ ul {
           .icon {
             border-radius: 100%;
             transition: all 200ms;
+            // transform: scale(0.8);
+            img {
+              transition: all 200ms;
+              transform: scale(0.9);
+            }
           }
           .text-title {
             color: #ffffffcc;
