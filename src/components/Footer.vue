@@ -172,6 +172,9 @@ a {
         > a {
           color: #4a596f;
         }
+        >a:hover{
+          color: #2d81f6;
+        }
         >span{
             margin: 0 10px;
         }
