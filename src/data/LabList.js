@@ -38,7 +38,7 @@ export function Data() {
                 contentTitle: '通用易读的编程语言',
                 contentDes: '从图形化编程到文本编程，从AI应用到硬件物联，首创带有舞台区的编辑模式，运用动画和声音制作游戏，全方面体会Python语言的乐趣。',
                 video: pythonV,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '02',
@@ -49,7 +49,7 @@ export function Data() {
                 contentTitle: '专为6-9岁孩子定制的编程启蒙App',
                 contentDes: '腾讯自研的游戏化编程启蒙APP，作为孩子的“编程第一课”，通过趣味的积木编程闯关，让孩子学习编程更简单、更有趣、更高效。',
                 video: kouding,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '03',
@@ -60,7 +60,7 @@ export function Data() {
                 contentTitle: '创意实验室的3D版本',
                 contentDes: '扣叮和艾兰岛共同出品，学会了创意实验室就可以轻松上手，培养空间思维，制作3D创意作品。也可前往艾兰岛官网体验更专业的游戏编辑器。',
                 video: video0,
-                // exp: [exp0]
+                // exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '04',
@@ -71,7 +71,7 @@ export function Data() {
                 contentTitle: '算法模型，感受前沿科技',
                 contentDes: '初学者直接应用简单的AI能力（拍照识花、语音识别、智能聊天等），体会AI的乐趣；高阶学习者参与常见算法模型的调参过程，学习AI的底层逻辑。',
                 video: video0,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '05',
@@ -82,7 +82,7 @@ export function Data() {
                 contentTitle: '图形化编程，创意游戏闯关',
                 contentDes: '积木块拼接而成的丰富多彩的创意游戏世界，零基础小朋友也可以通过图形化编程进行寻路闯关。',
                 video: video0,
-                // exp: [exp0]
+                // exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '06',
@@ -93,7 +93,7 @@ export function Data() {
                 contentTitle: '用编程进行艺术表达',
                 contentDes: '将编程与艺术、数学等STEAM多方面知识相结合，制作可视化的艺术案例，激发学生的想象力和创造力，帮助更好地学习理解数理知识。',
                 video: video0,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
         ],
         'pagetwo': [
@@ -106,7 +106,7 @@ export function Data() {
                 contentTitle: '软硬件结合的编程体验',
                 contentDes: '通过过在线编程，控制Arduino、micro:bit、OpenAIE、CocoRobo等教育硬件，并同时支持积木和代码两种模式，体会软硬结合的编程学习。',
                 video: video0,
-                // exp: [exp0]
+                // exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '08',
@@ -117,7 +117,7 @@ export function Data() {
                 contentTitle: '面向对象的Web语言',
                 contentDes: '从积木命令到文本代码，从形状绘制到精灵动画，引导掌握计算机科学知识，从易到难感受JavaScript语言的魅力。',
                 video: video0,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
         ]
     }
