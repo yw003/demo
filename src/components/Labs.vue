@@ -60,10 +60,12 @@
         </div>
         <div class="content-dowm">
           <div class="hd" v-if="content.exp">
-            <span v-if="content.u_id !='02'">入门学习</span>
+            <span v-if="content.u_id !='02'">
+              <a href="#">入门学习</a>
+            </span>
             <span v-else>应用截图</span>
             <span>
-              更多案列
+              <a href="#">更多案列</a>
               <i class="iconfont">&#xe609;</i>
             </span>
           </div>
@@ -132,6 +134,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
 .select {
   // display: block !important
   background: #fff;
@@ -332,6 +337,21 @@ ul {
           height: 34px;
           display: flex;
           justify-content: space-between;
+          > span:nth-child(1) {
+            color: #4a596f;
+            font-size: 18px;
+            > a {
+              color: #4a596f;
+              font-size: 18px;
+            }
+          }
+          > span:nth-child(2) {
+            color: #4a596f;
+            > a {
+              color: #4a596f;
+              font-size: 16px;
+            }
+          }
         }
         .img {
           display: flex;
