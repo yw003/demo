@@ -59,24 +59,20 @@
           </div>
         </div>
         <div class="content-dowm">
-          <div class="hd">
-            <span>入门学习</span>
+          <div class="hd" v-if="content.exp">
+            <span v-if="content.u_id !='02'">入门学习</span>
+            <span v-else>应用截图</span>
             <span>
               更多案列
               <i class="iconfont">&#xe609;</i>
             </span>
           </div>
           <div class="img">
-            <div class="exp">
-              <img src="../assets/exp.png" alt />
-              <span>一起去旅游</span>
-            </div>
-            <div class="exp">
-              <img src="../assets/exp.png" alt />
-              <span>一起去旅游</span>
-            </div>
-            <div class="exp">
-              <img src="../assets/exp.png" alt />
+            <div class="exp" v-for="(item,index) in content.exp" :key="index">
+              <a href="#" v-if="content.u_id !='02'">
+                <img :src="item" alt />
+              </a>
+              <img v-else :src="item" alt />
               <span>一起去旅游</span>
             </div>
           </div>
@@ -361,7 +357,7 @@ ul {
           .exp:hover {
             img {
               transition: all 0.5s;
-              transform: scale(1.1);
+              transform: scale(1.05);
             }
           }
         }

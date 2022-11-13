@@ -11,25 +11,28 @@ import js from '@/assets/js.png'
 import video0 from '@/assets/video/1.mp4'
 import pythonV from '@/assets/video/python.mp4'
 import kouding from '@/assets/video/kouding.mp4'
+//案例图片
 import exp0 from '@/assets/exp.png'
+import exp1 from '@/assets/exp1.png'
+import exp2 from '@/assets/exp2.png'
 export function Data() {
     return {
         "pageOne": [
             {
                 u_id: '00',
                 img: originality,
-                backColor:'rgb(251, 232, 194)',
+                backColor: 'rgb(251, 232, 194)',
                 title: '创意实验室',
                 titleDes: ['6+岁', '创造力', '图形化'],
                 contentTitle: '像搭积木一样编程创作',
                 contentDes: '让学编程和搭积木一样简单，有效帮助孩子形成编程思维，锻炼逻辑思维，轻松制作有趣有料的编程项目，发挥自己的无限创意。',
                 video: video0,
-                exp: [exp0]
+                exp: [exp0, exp1, exp2]
             },
             {
                 u_id: '01',
                 img: python,
-                backColor:'rgb(193, 223, 251)',
+                backColor: 'rgb(193, 223, 251)',
                 title: 'Python实验室',
                 titleDes: ['7+岁', '逻辑思维', 'Python'],
                 contentTitle: '通用易读的编程语言',
@@ -57,7 +60,7 @@ export function Data() {
                 contentTitle: '创意实验室的3D版本',
                 contentDes: '扣叮和艾兰岛共同出品，学会了创意实验室就可以轻松上手，培养空间思维，制作3D创意作品。也可前往艾兰岛官网体验更专业的游戏编辑器。',
                 video: video0,
-                exp: [exp0]
+                // exp: [exp0]
             },
             {
                 u_id: '04',
@@ -79,7 +82,7 @@ export function Data() {
                 contentTitle: '图形化编程，创意游戏闯关',
                 contentDes: '积木块拼接而成的丰富多彩的创意游戏世界，零基础小朋友也可以通过图形化编程进行寻路闯关。',
                 video: video0,
-                exp: [exp0]
+                // exp: [exp0]
             },
             {
                 u_id: '06',
@@ -103,7 +106,7 @@ export function Data() {
                 contentTitle: '软硬件结合的编程体验',
                 contentDes: '通过过在线编程，控制Arduino、micro:bit、OpenAIE、CocoRobo等教育硬件，并同时支持积木和代码两种模式，体会软硬结合的编程学习。',
                 video: video0,
-                exp: [exp0]
+                // exp: [exp0]
             },
             {
                 u_id: '08',
